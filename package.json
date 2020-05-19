@@ -4,6 +4,7 @@
   "private": true,
   "description": "Bootstrapping typescript application for nodejs with express",
   "repository": "https://github.com/ben-x/typescript-bootstrap.git",
+  "homepage": "https://ben-x.github.io/typescript-bootstrap",
   "main": "src/index.ts",
   "scripts": {
     "start": "node ./dist/index.js",
