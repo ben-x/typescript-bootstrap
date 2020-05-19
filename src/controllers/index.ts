@@ -1,5 +1,5 @@
 import Ctrl from './ctrl';
-import Person from './person';
+import PersonCtrl from './person';
 
 export const ctrl = new Ctrl();
-export const PersonCtrl = new Person();
+export const personCtrl = new PersonCtrl();

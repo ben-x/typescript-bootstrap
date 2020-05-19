@@ -7,8 +7,9 @@ import Ctrl from '../ctrl';
 
 /**
  * Person controller
+ * @category Controllers
  */
-class Person extends Ctrl {
+class PersonCtrl extends Ctrl {
   /**
    * @constructor
    */
@@ -44,9 +45,10 @@ class Person extends Ctrl {
    */
   delete(): RequestHandler {
     return async (req: Request, res: Response): Promise<object> => {
+      // Todo: implement delete handler
       return res.send(req.body);
     };
   }
 }
 
-export default Person;
+export default PersonCtrl;

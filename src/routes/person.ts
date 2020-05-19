@@ -1,5 +1,5 @@
 import {Router as expressRouter} from 'express';
-import {PersonCtrl} from '../controllers';
+import {personCtrl} from '../controllers';
 
 /**
  * @category Routers
@@ -9,14 +9,14 @@ const router: expressRouter = expressRouter();
 /**
  * Create new person route
  */
-router.post('/new', PersonCtrl.create());
+router.post('/new', personCtrl.create());
 
 /**
  * Fetch all people
  */
-router.get('/fetch', PersonCtrl.fetch());
+router.get('/fetch', personCtrl.fetch());
 
 /**
  * Route to delete all people
  */
-router.delete('/', PersonCtrl.delete());
+router.delete('/', personCtrl.delete());
