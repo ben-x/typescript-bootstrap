@@ -8,7 +8,7 @@ interface PersonConstructorInterface {
 
 /**
  * @interface
- * @category Module
+ * @category Modules
  */
 interface NewPersonInterface {
   name: PersonInterface['name'];
@@ -19,7 +19,7 @@ interface NewPersonInterface {
 
 /**
  * Person module: handle all person interaction with database and business logic
- * @category Module
+ * @category Modules
  */
 class Person extends Module {
   private model: Model<PersonInterface>;
