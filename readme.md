@@ -1,4 +1,4 @@
-# Express Typescript Bootstrap
+# Typescript Bootstrap
 A bootstrap for building express apps with typescript
 
 ## Getting Started
@@ -18,9 +18,6 @@ Nodejs >= v8
 ```
 Mongodb
 ```
-```
-RabbitMQ
-```
 
 ### Installing
 
@@ -38,16 +35,19 @@ To start this app, perform the following step in order
 ```
 4. Run the command "npm start"
 ```
+```$xslt
+5. For development, execute npm run dev to start the dev environment
+```
 
 ### Coding style guide
 For easy references and development, please adhere to the style guide defined in the eslint config
 and editor config
 
 ```
-Please make sure to configure your editor to follow eslint specified in this project
-```
-```
-Refer to google style guide for further clarification
+Please make sure to configure your editor to follow 
+eslint specified in this project
+
+The style guide used for this project is the google style guide
 ```
 
 ## Deployment
@@ -66,7 +66,7 @@ Please read [CONTRIBUTING.md]() for details on our code of conduct, and the proc
 
 ## Authors
 
-* **Benjamin Eloke Chi** 
+* **benx** 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
