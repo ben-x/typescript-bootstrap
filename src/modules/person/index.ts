@@ -7,15 +7,10 @@ interface PersonConstructorInterface {
 }
 
 /**
- * @interface
- * @category Modules
+ * @type NewPersonInput
+ * Definition of input required to create a person
  */
-interface NewPersonInterface {
-  name: PersonInterface['name'];
-  age: PersonInterface['age'];
-  gender: PersonInterface['gender'];
-  dob: PersonInterface['dob'];
-}
+type NewPersonInput = Pick<PersonInterface, 'name' | 'age' | 'gender' | 'dob'>;
 
 /**
  * Person module: handle all person interaction with database and business logic
@@ -36,13 +31,13 @@ class Person extends Module {
 
   /**
    * Creates a new person
-   * @param {NewPersonInterface} data property of person to be created
+   * @param {NewPersonInput} data property of person to be created
    * @throws MongooseError.ValidationError
    * @throws MongoError
    * @throws DuplicateException
    * @return {Promise<Object>}
    */
-  public async create(data: NewPersonInterface): Promise<PersonInterface|undefined> {
+  public async create(data: NewPersonInput): Promise<PersonInterface|undefined> {
     // Todo: implement create person
     let newPerson: PersonInterface|undefined;
 
