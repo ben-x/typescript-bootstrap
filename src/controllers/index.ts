@@ -1,5 +1,4 @@
-import Ctrl from './ctrl';
+import {person} from '../modules';
 import PersonCtrl from './person';
 
-export const ctrl = new Ctrl();
-export const personCtrl = new PersonCtrl();
+export const personCtrl = new PersonCtrl(person);

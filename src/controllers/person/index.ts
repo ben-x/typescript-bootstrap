@@ -3,6 +3,9 @@ import {
   Response,
   RequestHandler
 } from 'express';
+
+import {PersonInterface} from '../../models/person';
+import Person from '../../modules/person';
 import Ctrl from '../ctrl';
 
 /**
@@ -11,10 +14,17 @@ import Ctrl from '../ctrl';
  */
 class PersonCtrl extends Ctrl {
   /**
-   * @constructor
+   * @param {Person} module Instance of Person module
    */
-  constructor() {
+  private module: Person;
+
+  /**
+   * @constructor
+   * @param {Person} module
+   */
+  constructor(module: Person) {
     super();
+    this.module = module;
   }
 
   /**
@@ -22,9 +32,11 @@ class PersonCtrl extends Ctrl {
    * @return {RequestHandler}
    */
   create(): RequestHandler {
-    return async (req: Request, res: Response): Promise<object> => {
+    return async (req: Request, res: Response): Promise<void> => {
       // Todo: implement create handler
-      return res.send(req.body);
+      const {body} = req;
+      const record: PersonInterface|undefined = await this.module.create(body);
+      this.ok(res, 'ok', record);
     };
   }
 
@@ -33,9 +45,9 @@ class PersonCtrl extends Ctrl {
    * @return {RequestHandler}
    */
   fetch(): RequestHandler {
-    return async (req: Request, res: Response): Promise<object> => {
+    return async (req: Request, res: Response): Promise<void> => {
       // Todo: implement create handler
-      return res.send(req.body);
+      res.send(req.body);
     };
   }
 
@@ -44,9 +56,9 @@ class PersonCtrl extends Ctrl {
    * @return {RequestHandler}
    */
   delete(): RequestHandler {
-    return async (req: Request, res: Response): Promise<object> => {
+    return async (req: Request, res: Response): Promise<void> => {
       // Todo: implement delete handler
-      return res.send(req.body);
+      res.send(req.body);
     };
   }
 }

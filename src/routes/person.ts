@@ -20,3 +20,5 @@ router.get('/fetch', personCtrl.fetch());
  * Route to delete all people
  */
 router.delete('/', personCtrl.delete());
+
+export default router;
