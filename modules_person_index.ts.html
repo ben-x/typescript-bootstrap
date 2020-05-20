@@ -158,15 +158,19 @@ class Person extends Module {
    */
   async get(query: QueryInterface): Promise&lt;PersonInterface[]> {
     // Todo: implement fetch people
+    const people: PersonInterface[] = [];
+    return Promise.resolve(people);
   }
 
   /**
-   * Udpdate a person record
+   * Update a person record
    * @param {object} prop the person properties to update
    * @param {object} options other option that would influence how the update will be performed.
    * @throws MongoError
+   * @return {PersonInterface}
    */
-  async update(prop: object, options: object): Promise&lt;PersonInterface> {
+  async update(prop: object, options: object): Promise&lt;object> {
+    return Promise.resolve({});
     // Todo: implement update
   }
 
@@ -176,7 +180,18 @@ class Person extends Module {
    * @throws MongoError
    */
   public async delete(personId: string): Promise&lt;boolean> {
+    return Promise.resolve(true);
     // Todo: implement delete operation
+  }
+
+  /**
+   * getFullName method
+   * @param {string} firstName
+   * @param {string} lastName
+   * @return {string}
+   */
+  static getFullName(firstName: string, lastName: string): string {
+    return `${firstName} ${lastName}`;
   }
 }
 
