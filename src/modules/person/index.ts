@@ -1,6 +1,6 @@
 import {Model} from 'mongoose';
 import {PersonInterface} from '../../models/person';
-import Module, {QueryInterface} from '../module';
+import {Module, QueryInterface} from '../module';
 
 interface PersonConstructorInterface {
   model: Model<PersonInterface>;

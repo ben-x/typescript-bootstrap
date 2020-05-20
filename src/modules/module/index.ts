@@ -1,5 +1,5 @@
 import {Error as MongooseError} from 'mongoose';
-import {DatabaseException, DatabaseValidationException} from '../exceptions';
+import {DatabaseException, DatabaseValidationException} from '../../exceptions';
 import {MongoError} from 'mongodb';
 
 export interface QueryInterface {
@@ -14,7 +14,7 @@ export interface QueryInterface {
  * Base model class
  * @category Modules
  */
-class Module {
+export class Module {
   /**
    * Handle generic error in modules
    * @param {Error} error
@@ -29,5 +29,3 @@ class Module {
     }
   }
 }
-
-export default Module;
