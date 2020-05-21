@@ -9,7 +9,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "node ./dist/index.js",
-    "dev": "node_modules/.bin/nodemon ./dist/index.js",
+    "dev": "npx tsc && node_modules/.bin/nodemon ./dist/index.js",
     "lint": "eslint --ext .ts,.json --max-warnings=0 src",
     "test": "NODE_ENV=test node_modules/.bin/mocha -r ts-node/register src/**/*.spec.ts",
     "build": "rm -rf ./dist && npx tsc",

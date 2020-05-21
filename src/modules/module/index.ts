@@ -14,7 +14,7 @@ export interface QueryInterface {
  * Base model class
  * @category Modules
  */
-export class Module {
+export abstract class Module {
   /**
    * Handle generic error in modules
    * @param {Error} error
